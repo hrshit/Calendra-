@@ -3,7 +3,7 @@ import Image from "next/image";
 import { neobrutalism } from "@clerk/themes";
 export default function LandingPage() {
   return (
-    <main className="flex items-center p-10 gap-24 animate-fade-in max-md:flex-col">
+    <div className="min-h-screen flex items-center justify-center p-10 gap-24 animate-fade-in max-md:flex-col">
       <section className="flex flex-col items-center">
         <Image src="/assets/logo.svg" alt="logo" width={100} height={100} />
 
@@ -20,17 +20,17 @@ export default function LandingPage() {
         {/* illustration Image */}
 
         <Image src="/assets/planning.svg" alt="logo" width={100} height={100} />
-          </section>
-          
-          {/* Clerk Sign-in Componnet with custom theme  */}
-          <div className="mt-3">
-              <SignIn
-              routing="hash" //keeps sign-in ui on the same page using hasbased routing
-                  appearance={{
-                  baseTheme: neobrutalism,
-              }}
-              />
-          </div>
-    </main>
+      </section>
+
+      {/* Clerk Sign-in Componnet with custom theme  */}
+      <div className="mt-3">
+        <SignIn
+          routing="hash" //keeps sign-in ui on the same page using hasbased routing
+          appearance={{
+            baseTheme: neobrutalism,
+          }}
+        />
+      </div>
+    </div>
   );
 }
